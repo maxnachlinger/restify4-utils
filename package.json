@@ -1,0 +1,29 @@
+{
+  "name": "restify4-utils",
+  "version": "0.0.2",
+  "description": "A set of utils I use a lot when using restify 4.x.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/standard && node tests/**/*.js"
+  },
+  "engines": {
+    "node": ">4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxnachlinger/restify4-utils.git"
+  },
+  "author": "Max Nachlinger",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.6.0",
+    "restify-errors": "^4.1.0"
+  },
+  "devDependencies": {
+    "restify": "^4.0.4",
+    "sinon": "^1.17.3",
+    "standard": "^6.0.5",
+    "tape": "^4.4.0",
+    "tape-catch": "^1.0.4"
+  }
+}
