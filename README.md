@@ -35,7 +35,7 @@ const port = 8080
 const logger = restify4Utils.bunyanLogger
 
 const server = restify.createServer({
-  log: logger // gives us req.log
+  log: logger
 })
 
 restify4Utils.excludeErrorsFromResponse(server)
@@ -43,7 +43,7 @@ restify4Utils.excludeErrorsFromResponse(server)
 server.use(restify.acceptParser(server.acceptable))
 server.use(restify.gzipResponse())
 server.use(restify.authorizationParser())
-server.use(restify.requestLogger()) // adds req.log
+server.use(restify.requestLogger())
 
 restify4Utils.handleUncaughtExceptions(server)
 restify4Utils.addBunyanAuditLogger(server)
