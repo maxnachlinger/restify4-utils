@@ -91,6 +91,7 @@ curl "http://localhost:8080/healthcheck" -verbose
 ```javascript
 const restify4Utils = require('restify4-utils')
 const logger = restify4Utils.bunyanLogger
+// this is just an instance of a Bunyan logger, so go crazy :)
 
 // hey look, I"m changing the logger
 logger.addStream({
@@ -99,6 +100,4 @@ logger.addStream({
   closeOnExit: false,
   level: 'error'
 });
-
-// this is just an instance of a Bunyan logger, go crazy :)
 ```
