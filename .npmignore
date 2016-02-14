@@ -2,3 +2,4 @@
 node_modules
 *.iml
 example
+.travis.yml

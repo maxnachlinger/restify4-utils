@@ -3,9 +3,12 @@
 A set of utils I use a lot when using restify 4.x on projects.
 If I'm the only one who ever uses this, then I'll have succeeded :)
 
+[![travis][travis-image]][travis-url]
 [![npm][npm-image]][npm-url]
 [![standard][standard-image]][standard-url]
 
+[travis-image]: https://travis-ci.org/maxnachlinger/restify4-utils.svg?branch=master
+[travis-url]: https://travis-ci.org/maxnachlinger/restify4-utils
 [npm-image]: https://img.shields.io/npm/v/restify4-utils.svg?style=flat
 [npm-url]: https://npmjs.org/package/restify4-utils
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
