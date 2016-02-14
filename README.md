@@ -77,7 +77,7 @@ server.get({
   }, 500)
 })
 ```
-This example is available [here](https://github.com/maxnachlinger/restify4-utils/blob/master/example/).
+This example is available [here](https://github.com/maxnachlinger/restify4-utils/blob/master/example/index.js).
 
 Once that server is running, try these cURLs:
 
