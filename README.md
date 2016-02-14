@@ -16,7 +16,7 @@ If I'm the only one who ever uses this, then I'll have succeeded :)
 
 ### Installation:
 ```
-npm install restify4-utils --save
+npm i restify4-utils --save
 ```
 
 ### Utils
