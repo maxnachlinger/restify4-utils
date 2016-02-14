@@ -9,8 +9,8 @@ test('excludeErrorsFromResponse unit tests', (t) => {
   const server = restify.createServer()
   excludeErrorsFromResponse(server)
 
-  const jsonFormatter = server.formatters['application/json']
-  Add
+  const jsonFormatter = server.formatters[ 'application/json' ]
+
   const resStub = {
     send: sinon.stub(),
     setHeader: sinon.stub()

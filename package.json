@@ -4,7 +4,7 @@
   "description": "A set of utils I use a lot when using restify 4.x on projects.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/standard && node tests/**/*.js"
+    "test": "./node_modules/.bin/standard && node_modules/.bin/tape tests/**/.js"
   },
   "engines": {
     "node": ">4.0.0"
