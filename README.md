@@ -19,13 +19,13 @@ npm install restify4-utils --save
 ### Utils
 The following utils are provided:
 
-- A [Bunyan logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanLogger.js) which simply logs things to ``process.stdout``, you can also add additional logging streams to this logger if you need them.
+- A [Bunyan logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanLogger.js) which simply logs things to ``process.stdout``, you can also add additional logging streams / serialzers etc to this logger if you need them (see [Extending the Bunyan logger] (#stuff) below).
 - An [Bunyan audit logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanAuditLogger.js) which uses the ``bunyanLogger`` above and prints timing info for server calls.  You can use it as it is, or add it to you server instance via [addBunyanAuditLogger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/addBunyanAuditLogger.js).
 - A [formatter wrapper](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/excludeErrorsFromResponse.js) to keep error details from going out in server responses.
 - A simple [``uncaughtException`` handler](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/handleUncaughtExceptions.js) which logs the exception and sends a vanilla 500 response.
 - A simple [healthcheck route](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/addHealthCheck.js).
 
-### Example
+### Basic Example
 ```javascript
 'use strict'
 const restify = require('restify')
@@ -77,6 +77,7 @@ server.get({
   }, 500)
 })
 ```
+This example is available [here](https://github.com/maxnachlinger/restify4-utils/blob/master/example/).
 
 Once that server is running, try these cURLs:
 
@@ -84,4 +85,20 @@ Once that server is running, try these cURLs:
 curl "http://localhost:8080/error/nodejs/next" -verbose
 curl "http://localhost:8080/error/nodejs/throw" -verbose
 curl "http://localhost:8080/healthcheck" -verbose
+```
+
+### Extending the Bunyan logger
+```javascript
+const restify4Utils = require('restify4-utils')
+const logger = restify4Utils.bunyanLogger
+
+// hey look, I"m changing the logger
+logger.addStream({
+  type: 'stream',
+  stream: process.stderr,
+  closeOnExit: false,
+  level: 'error'
+});
+
+// this is just an instance of a Bunyan logger, go crazy :)
 ```

@@ -1,7 +1,7 @@
 {
   "name": "restify4-utils",
   "version": "0.0.1",
-  "description": "A set of utils I use a lot when using restify 4.x.",
+  "description": "A set of utils I use a lot when using restify 4.x on projects.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/standard && node tests/**/*.js"

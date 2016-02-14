@@ -1,6 +1,6 @@
 'use strict'
 const restify = require('restify')
-const restify4Utils = require('restify4-utils')
+const restify4Utils = require('..')
 
 const port = 8080
 const logger = restify4Utils.bunyanLogger

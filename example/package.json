@@ -1,0 +1,17 @@
+{
+  "name": "restify4-utils-basic-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">4.0.0"
+  },
+  "author": "Max Nachlinger",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^4.0.4"
+  },
+}
