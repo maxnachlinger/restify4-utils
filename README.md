@@ -23,7 +23,7 @@ npm i restify4-utils --save
 The following utils are provided:
 
 - A [Bunyan logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanLogger.js) which simply logs things to ``process.stdout``, you can also add additional logging streams / serializers etc to this logger if you need them (see [Extending the Bunyan logger] (#extending-the-bunyan-logger) below).
-- An [Bunyan audit logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanAuditLogger.js) which uses the ``bunyanLogger`` above and prints timing info for server calls.  You can use it as it is, or add it to you server instance via [addBunyanAuditLogger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/addBunyanAuditLogger.js).
+- A [Bunyan audit logger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/bunyanAuditLogger.js) which uses the ``bunyanLogger`` above and prints timing info for server calls.  You can use it as it is, or add it to you server instance via [addBunyanAuditLogger](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/addBunyanAuditLogger.js).
 - A [formatter wrapper](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/excludeErrorsFromResponse.js) to keep error details from going out in server responses.
 - A simple [``uncaughtException`` handler](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/handleUncaughtExceptions.js) which logs the exception and sends a vanilla 500 response.
 - A simple [healthcheck route](https://github.com/maxnachlinger/restify4-utils/blob/master/lib/addHealthCheck.js).
