@@ -77,7 +77,7 @@ server.get({
 }, () => {
   // simulates async work
   setTimeout(() => {
-    // goes server.on('uncaughtException')
+    // handled by server.on('uncaughtException')
     throw new Error('Test error')
   }, 500)
 })
