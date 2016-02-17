@@ -41,14 +41,14 @@ const server = restify.createServer({
   log: logger
 })
 
-restify4Utils.excludeErrorsFromResponse(server, logger)
+restify4Utils.excludeErrorsFromResponse(server)
 
 server.use(restify.acceptParser(server.acceptable))
 server.use(restify.gzipResponse())
 server.use(restify.authorizationParser())
 server.use(restify.requestLogger())
 
-restify4Utils.handleUncaughtExceptions(server, logger)
+restify4Utils.handleUncaughtExceptions(server)
 restify4Utils.addBunyanAuditLogger(server)
 restify4Utils.addHealthCheck(server)
 
@@ -66,6 +66,7 @@ server.get({
 }, (req, res, next) => {
   // simulates async work
   setTimeout(() => {
+    // goes through the formatters to res.send
     next(new Error('Test error'))
   }, 500)
 })
@@ -76,6 +77,7 @@ server.get({
 }, () => {
   // simulates async work
   setTimeout(() => {
+    // goes server.on('uncaughtException')
     throw new Error('Test error')
   }, 500)
 })

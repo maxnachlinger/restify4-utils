@@ -1,6 +1,6 @@
 {
   "name": "restify4-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of utils I use a lot when using restify 4.x on projects.",
   "main": "index.js",
   "scripts": {

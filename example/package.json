@@ -13,5 +13,5 @@
   "license": "ISC",
   "dependencies": {
     "restify": "^4.0.4"
-  },
+  }
 }
