@@ -41,14 +41,14 @@ const server = restify.createServer({
   log: logger
 })
 
-restify4Utils.excludeErrorsFromResponse(server)
+restify4Utils.excludeErrorsFromResponse(server, logger)
 
 server.use(restify.acceptParser(server.acceptable))
 server.use(restify.gzipResponse())
 server.use(restify.authorizationParser())
 server.use(restify.requestLogger())
 
-restify4Utils.handleUncaughtExceptions(server)
+restify4Utils.handleUncaughtExceptions(server, logger)
 restify4Utils.addBunyanAuditLogger(server)
 restify4Utils.addHealthCheck(server)
 
