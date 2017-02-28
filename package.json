@@ -22,7 +22,7 @@
   "devDependencies": {
     "restify": "^4.0.4",
     "sinon": "^1.17.3",
-    "standard": "^8.3.0",
+    "standard": "^9.0.0",
     "tape": "^4.4.0",
     "tape-catch": "^1.0.4"
   }
